@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocorrências - Amapá Participa</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="pagina-ocorrencias">
+
+<header class="topo">
+
+    <div class="topo-logo">
+        <img src="../img/logo-provisoria.png" alt="Amapá Participa">
+        <span>Amapá Participa</span>
+    </div>
+
+    <button
+        type="button"
+        id="botao-menu"
+        class="botao-menu"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+    >
+        ☰
+        <span>Menu</span>
+    </button>
+
+    <nav class="topo-menu" id="menu-principal" aria-label="Menu principal">
+
+        <a href="../index.html" class="botao-voltar-menu">
+        ← Voltar
+        </a>
+
+        <a href="ocorrencias.html" class="ativo">Ocorrências</a>
+        <a href="minhas-ocorrencias.html">Minhas ocorrências</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="orgaos.html">Órgãos cadastrados</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="suporte.html">Equipe de Suporte</a>
+    </nav>
+
+    <div class="topo-acoes">
+        <button id="botao-busca-topo" type="button" aria-label="Buscar">
+            <img src="../img/lupa-azul.png" alt="">
+        </button>
+
+        <div id="avatar-usuario" class="avatar-usuario">--</div>
+    </div>
+
+</header>
+
+<div class="layout">
+
+    <aside class="lateral">
+
+        <ul id="lista-categorias" class="lista-categorias">
+
+            <li data-categoria="todas" class="categoria ativa">
+                Todas as ocorrências
+            </li>
+
+            <li data-categoria="infraestrutura" class="categoria">
+                Infraestrutura
+            </li>
+
+            <li data-categoria="meio-ambiente" class="categoria">
+                Meio ambiente
+            </li>
+
+            <li data-categoria="iluminacao-publica" class="categoria">
+                Iluminação pública
+            </li>
+
+            <li data-categoria="transporte" class="categoria">
+                Transporte
+            </li>
+
+            <li data-categoria="limpeza-urbana" class="categoria">
+                Limpeza urbana
+            </li>
+
+            <li data-categoria="outros" class="categoria">
+                Outros
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <main class="conteudo">
+
+        <h1>Ocorrências</h1>
+
+        <p class="subtitulo">
+            Veja as ocorrências registradas na sua comunidade.
+        </p>
+
+        <div class="barra-busca">
+
+            <input
+                type="text"
+                id="buscar-ocorrencias"
+                placeholder="Buscar ocorrências..."
+            >
+
+            <select id="filtro-categoria">
+                <option value="todas">Selecionar categoria +</option>
+                <option value="infraestrutura">Infraestrutura</option>
+                <option value="meio-ambiente">Meio ambiente</option>
+                <option value="iluminacao-publica">Iluminação pública</option>
+                <option value="transporte">Transporte</option>
+                <option value="limpeza-urbana">Limpeza urbana</option>
+                <option value="outros">Outros</option>
+            </select>
+
+            <button id="botao-filtros" type="button">
+                Filtros
+            </button>
+
+        </div>
+
+        <div id="painel-filtros" class="painel-filtros escondido">
+
+            <span>Status:</span>
+
+            <button
+                class="filtro-status ativo"
+                data-status="todas"
+                type="button"
+            >
+                Todas
+            </button>
+
+            <button
+                class="filtro-status"
+                data-status="registrada"
+                type="button"
+            >
+                Registrada
+            </button>
+
+            <button
+                class="filtro-status"
+                data-status="em-analise"
+                type="button"
+            >
+                Em análise
+            </button>
+
+            <button
+                class="filtro-status"
+                data-status="encaminhada"
+                type="button"
+            >
+                Encaminhada
+            </button>
+
+            <button
+                class="filtro-status"
+                data-status="em-atendimento"
+                type="button"
+            >
+                Em atendimento
+            </button>
+
+            <button
+                class="filtro-status"
+                data-status="resolvida"
+                type="button"
+            >
+                Resolvida
+            </button>
+
+        </div>
+
+        <div
+            id="filtros-ativos"
+            class="filtros-ativos escondido"
+        >
+
+            <span class="filtros-ativos-titulo">
+                Filtros ativos:
+            </span>
+
+            <div
+                id="lista-filtros-ativos"
+                class="lista-filtros-ativos"
+            ></div>
+
+            <button
+                id="limpar-filtros"
+                type="button"
+                class="botao-limpar-filtros"
+            >
+                Limpar filtros
+            </button>
+
+        </div>
+
+        <div id="grade-ocorrencias" class="grade-ocorrencias">
+            <!-- Os cards são inseridos aqui pelo ocorrencias.js -->
+        </div>
+
+        <p id="mensagem-vazia" class="mensagem-vazia escondido">
+            Nenhuma ocorrência encontrada com esses filtros.
+        </p>
+
+    </main>
+
+</div>
+
+<script src="../js/ocorrencias.js"></script>
+
+</body>
+</html>

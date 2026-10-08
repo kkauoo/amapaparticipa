@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar ocorrência - Amapá Participa</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="pagina-registrar">
+
+<header class="topo">
+
+    <div class="topo-logo">
+        <img src="../img/logo-provisoria.png" alt="Amapá Participa">
+        <span>Amapá Participa</span>
+    </div>
+
+    <button
+        type="button"
+        id="botao-menu"
+        class="botao-menu"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+    >
+        ☰
+        <span>Menu</span>
+    </button>
+
+    <nav
+        class="topo-menu"
+        id="menu-principal"
+        aria-label="Menu principal"
+    >
+        <a href="ocorrencias.html">Ocorrências</a>
+        <a href="minhas-ocorrencias.html">Minhas ocorrências</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="orgaos.html">Órgãos cadastrados</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="suporte.html">Equipe de Suporte</a>
+    </nav>
+
+    <div class="topo-acoes">
+        <button
+            id="botao-busca-topo"
+            type="button"
+            aria-label="Buscar"
+        >
+            <img src="../img/lupa-azul.png" alt="">
+        </button>
+
+        <div
+            id="avatar-usuario"
+            class="avatar-usuario"
+        >
+            --
+        </div>
+    </div>
+
+</header>
+
+<main class="registro-conteudo">
+
+    <div class="registro-cabecalho">
+
+        <a
+            href="../index.html"
+            class="botao-voltar-registro"
+        >
+            ← Voltar para página inicial
+        </a>
+
+        <h1>Registrar ocorrência</h1>
+
+        <p>
+            Informe os detalhes do problema encontrado
+            para que ele possa ser registrado na plataforma.
+        </p>
+
+    </div>
+
+    <form
+        id="form-ocorrencia"
+        class="form-ocorrencia"
+    >
+
+        <div class="campo-ocorrencia">
+
+            <label for="categoria">
+                Categoria
+            </label>
+
+            <select id="categoria">
+                <option value="">
+                    Selecione uma categoria
+                </option>
+
+                <option value="infraestrutura">
+                    Infraestrutura
+                </option>
+
+                <option value="meio-ambiente">
+                    Meio ambiente
+                </option>
+
+                <option value="iluminacao-publica">
+                    Iluminação pública
+                </option>
+
+                <option value="transporte">
+                    Transporte
+                </option>
+
+                <option value="limpeza-urbana">
+                    Limpeza urbana
+                </option>
+
+                <option value="outros">
+                    Outros
+                </option>
+            </select>
+
+        </div>
+
+        <div class="campo-ocorrencia">
+
+            <label for="titulo">
+                Título da ocorrência
+            </label>
+
+            <input
+                type="text"
+                id="titulo"
+                placeholder="Ex.: Buraco na via"
+            >
+
+        </div>
+
+        <div class="campo-ocorrencia">
+
+            <label for="local">
+                Localização
+            </label>
+
+            <input
+                type="text"
+                id="local"
+                placeholder="Informe onde o problema está localizado"
+            >
+
+        </div>
+
+        <div class="campo-ocorrencia">
+
+            <label for="foto">
+                Foto
+            </label>
+
+            <input
+                type="file"
+                id="foto"
+                accept="image/*"
+            >
+
+            <p class="ajuda-campo">
+                Adicione pelo menos uma foto do problema.
+            </p>
+
+        </div>
+
+        <div class="campo-ocorrencia">
+
+            <label for="descricao">
+                Descrição
+            </label>
+
+            <textarea
+                id="descricao"
+                maxlength="500"
+                placeholder="Descreva o problema encontrado..."
+            ></textarea>
+
+            <div class="contador-descricao">
+                <span id="contador-descricao">0</span>/500
+            </div>
+
+        </div>
+
+        <div class="acoes-ocorrencia">
+
+            <button
+                type="button"
+                id="botao-rascunho"
+                class="botao-rascunho"
+            >
+                Salvar rascunho
+            </button>
+
+            <button
+                type="submit"
+                class="botao-enviar-ocorrencia"
+            >
+                Registrar ocorrência
+            </button>
+
+        </div>
+
+    </form>
+
+</main>
+
+<script src="../js/registrar-ocorrencia.js"></script>
+
+</body>
+</html>

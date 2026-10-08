@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amapá Participa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="pagina-inicial">
+
+    <!-- ================= CABEÇALHO ================= -->
+    <header class="cabecalho">
+
+        <div class="cabecalho-logo">
+            <a href="index.html" aria-label="Amapá Participa - página inicial">
+                <img src="img/logo-provisoria.png" alt="Logo Amapá Participa" width="250" height="100">
+            </a>
+        </div>
+
+        <nav class="cabecalho-menu" aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html" class="ativo" aria-current="page">Início</a></li>
+                <li><a href="paginas/ocorrencias.html">Ocorrências</a></li>
+                <li><a href="#">Órgãos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+
+        <div class="cabecalho-acoes">
+
+            <button type="button" class="acao-pesquisa" id="botao-pesquisa" aria-label="Pesquisar">
+                <img src="img/lupa-azul.png" alt="" width="36" height="36">
+            </button>
+
+            <a href="paginas/login.html" class="acao-entrar">Entrar</a>
+            <a href="paginas/cadastro.html" class="acao-cadastrar">Cadastrar</a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CONTEÚDO ================= -->
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section class="hero">
+
+            <div class="hero-texto">
+
+                <h1 class="hero-titulo">
+                    Juntos por um
+                    <span class="titulo-verde">Amapá melhor!</span>
+                </h1>
+
+                <p class="hero-descricao">
+                    Registre ocorrências, acompanhe o andamento
+                    e participe da construção de uma comunidade
+                    mais segura, organizada e sustentável.
+                </p>
+
+                <div class="hero-botoes">
+
+                    <a href="paginas/registrar-ocorrencia.html" class="botao-registrar" id="botao-ocorrencia">
+                        <span class="icone-botao" aria-hidden="true">
+                            <img src="img/pin.png" alt="" width="42" height="42">
+                        </span>
+                        <span class="texto-botao">Registrar ocorrência</span>
+                    </a>
+
+                    <a href="paginas/ocorrencias.html" class="botao-ver-ocorrencias">
+                        <span class="icone-botao" aria-hidden="true">
+                            <img src="img/lupa-azul.png" alt="" width="38" height="38">
+                        </span>
+                        <span class="texto-botao">Ver ocorrências</span>
+                    </a>
+
+                    <a href="#sobre" class="botao-saiba">
+                        <span>Saiba mais</span>
+                        <svg class="seta" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-imagem">
+
+                <div class="detalhe-amarelo" aria-hidden="true"></div>
+
+                <div class="imagem-macapa">
+                    <img src="img/macapabanner.png" alt="Vista aérea de Macapá com a orla e a ponte" width="800" height="700" fetchpriority="high">
+                </div>
+
+                <div class="detalhe-verde" aria-hidden="true"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===== SOBRE ===== -->
+        <section class="sobre" id="sobre">
+            <div class="sobre-conteudo">
+
+                <h2>Sobre o Amapá Participa</h2>
+
+                <p>
+                    O Amapá Participa é uma plataforma criada
+                    para facilitar a comunicação entre os cidadãos
+                    e os órgãos responsáveis por problemas
+                    encontrados nas comunidades.
+                </p>
+
+                <p>
+                    Por meio da plataforma, os usuários poderão
+                    registrar ocorrências, informar sua localização,
+                    adicionar fotos e acompanhar o andamento
+                    das solicitações.
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="index.js" defer></script>
+
+</body>
+
+</html>

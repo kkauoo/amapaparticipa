@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <section class="banner">
+
+            <img src="../img/teladelogin.png" alt="Amapá Participa">
+
+        </section>
+
+        <section class="login-area">
+
+            <div class="login-box">
+
+                <h1>Acesse sua conta</h1>
+
+                <div class="tabs">
+
+                    <button class="tab active">
+                        E-mail ou CPF
+                    </button>
+
+                    <a href="cadastro.html" class="tab">
+                        Criar conta
+                    </a>
+
+                </div>
+
+                <form id="form-login">
+
+                    <div class="input-group">
+
+                        <label for="identificador">
+                            E-mail ou CPF
+                        </label>
+
+                        <div class="input-box">
+
+                            <img
+                                src="../img/usuario.png"
+                                alt="Usuário"
+                                class="input-icon"
+                            >
+
+                            <input
+                                type="text"
+                                id="identificador"
+                                placeholder="Digite seu e-mail ou CPF"
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <div class="input-box">
+
+                            <img
+                                src="../img/cadeado.png"
+                                alt="Senha"
+                                class="input-icon"
+                            >
+
+                            <input
+                                type="password"
+                                id="senha"
+                                placeholder="Digite sua senha"
+                            >
+
+                            <img
+                                src="../img/olhofechado.png"
+                                alt="Mostrar senha"
+                                class="password-icon"
+                                id="mostrar-senha"
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="login-options">
+
+                        <label class="remember">
+
+                            <input type="checkbox" id="lembrar-mim">
+
+                            <span>
+                                Lembrar de mim
+                            </span>
+
+                        </label>
+
+                        <a href="#">
+                            Esqueceu sua senha?
+                        </a>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                    >
+                        Entrar
+                    </button>
+
+                </form>
+
+                <p class="register-text">
+
+                    Não tem uma conta?
+
+                    <a href="cadastro.html">
+                        Cadastre-se
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>
