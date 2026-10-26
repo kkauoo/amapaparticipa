@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar ocorrência - Amapá Participa</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="pagina-registrar">
+
+    <header class="topo">
+        <div class="topo-logo">
+            <a href="../index.html" class="topo-logo-link">
+                <img src="../img/logo-provisoria.png" alt="Logo Amapá Participa">
+                <span>Amapá Participa</span>
+            </a>
+        </div>
+
+        <button
+            type="button"
+            class="botao-menu"
+            id="botao-menu"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+        >
+            <span>☰</span>
+            Menu
+        </button>
+
+        <nav class="topo-menu" id="menu-principal">
+            <a href="ocorrencias.html">Ocorrências</a>
+            <a href="minhas-ocorrencias.html">Minhas ocorrências</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="orgaos.html">Órgãos</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="suporte.html">Suporte</a>
+        </nav>
+
+        <div class="topo-acoes">
+            <button
+                type="button"
+                id="botao-busca-topo"
+                aria-label="Pesquisar"
+            >
+                <img src="../img/pesquisa.png" alt="">
+            </button>
+
+            <a
+                href="perfil.html"
+                class="avatar-usuario"
+                id="avatar-usuario"
+                aria-label="Meu perfil"
+            >?</a>
+        </div>
+    </header>
+
+    <main class="registro-conteudo">
+        <div class="registro-cabecalho">
+            <h1>Registrar ocorrência</h1>
+            <p>
+                Ajude a melhorar sua comunidade informando os problemas
+                encontrados no seu bairro.
+            </p>
+        </div>
+
+        <form id="form-ocorrencia" class="form-ocorrencia">
+
+            <div class="campo-formulario">
+                <label for="categoria">Categoria da ocorrência</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="">Selecione uma categoria</option>
+                    <option value="infraestrutura">Infraestrutura</option>
+                    <option value="meio-ambiente">Meio ambiente</option>
+                    <option value="iluminacao-publica">Iluminação pública</option>
+                    <option value="transporte">Transporte</option>
+                    <option value="limpeza-urbana">Limpeza urbana</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="titulo">Título da ocorrência</label>
+                <input
+                    type="text"
+                    id="titulo"
+                    name="titulo"
+                    minlength="5"
+                    maxlength="100"
+                    placeholder="Ex.: Buraco na rua principal"
+                    required
+                >
+                <small>Resuma o problema em poucas palavras.</small>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="local">Localização do problema</label>
+                <input
+                    type="text"
+                    id="local"
+                    name="local"
+                    placeholder="Informe a rua, o bairro ou um ponto de referência"
+                    required
+                >
+            </div>
+
+            <div class="campo-formulario campo-foto">
+                <label for="foto">Foto da ocorrência</label>
+                <input
+                    type="file"
+                    id="foto"
+                    name="foto"
+                    accept="image/*"
+                    required
+                >
+                <small>Selecione uma imagem de até 1,5 MB.</small>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="descricao">Descrição do problema</label>
+                <textarea
+                    id="descricao"
+                    name="descricao"
+                    maxlength="1000"
+                    rows="5"
+                    placeholder="Explique o que aconteceu e como isso afeta a comunidade."
+                    required
+                ></textarea>
+
+                <small>
+                    <span id="contador-descricao">0</span>/1000 caracteres
+                </small>
+            </div>
+
+            <div class="acoes-formulario">
+                <button type="button" id="botao-sair-rascunho">
+                    Sair e salvar rascunho
+                </button>
+
+                <button type="button" id="botao-sair">
+                    Sair
+                </button>
+
+                <button type="button" id="botao-rascunho">
+                    Salvar rascunho
+                </button>
+
+                <button type="submit" class="botao-enviar-ocorrencia">
+                    Registrar ocorrência
+                </button>
+            </div>
+
+        </form>
+    </main>
+
+    <script src="../js/registrar-ocorrencia.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas ocorrências - Amapá Participa</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="pagina-minhas-ocorrencias">
+
+    <header class="perfil-topo">
+        <a href="../index.html" class="perfil-logo">
+            <img src="../img/logo-provisoria.png" alt="Logo Amapá Participa">
+            <span>Amapá Participa</span>
+        </a>
+
+        <nav class="perfil-menu">
+            <a href="../index.html">Início</a>
+            <a href="ocorrencias.html">Ocorrências</a>
+            <a href="minhas-ocorrencias.html" class="ativo">Minhas ocorrências</a>
+            <a href="orgaos.html">Órgãos</a>
+            <a href="perfil.html">Perfil</a>
+        </nav>
+
+        <div class="perfil-acoes-topo">
+            <button
+                type="button"
+                class="perfil-pesquisa"
+                aria-label="Pesquisar"
+            >
+                <img src="../img/lupa-azul.png" alt="">
+            </button>
+
+            <a
+                href="perfil.html"
+                class="perfil-avatar-topo"
+                id="avatar-usuario-topo"
+                aria-label="Meu perfil"
+            >--</a>
+        </div>
+    </header>
+
+    <div class="perfil-layout">
+
+        <aside class="perfil-sidebar">
+            <div class="perfil-sidebar-usuario">
+                <div class="perfil-avatar" id="avatar-usuario-sidebar">--</div>
+
+                <div>
+                    <strong>Minha conta</strong>
+                    <p>Amapá Participa</p>
+                </div>
+            </div>
+
+            <nav class="perfil-sidebar-menu">
+                <a href="perfil.html">
+                    <span>👤</span>
+                    Meu perfil
+                </a>
+
+                <a href="minhas-ocorrencias.html" class="ativo">
+                    <span>📋</span>
+                    Minhas ocorrências
+                </a>
+
+                <a href="#">
+                    <span>⚙️</span>
+                    Configurações
+                </a>
+
+                <a href="#" id="botao-sair">
+                    <span>↪</span>
+                    Sair da conta
+                </a>
+            </nav>
+        </aside>
+
+        <main class="minhas-conteudo">
+
+            <div class="minhas-cabecalho">
+                <div>
+                    <h1>Minhas ocorrências</h1>
+                    <p>Acompanhe os problemas que você registrou.</p>
+                </div>
+
+                <a href="registrar-ocorrencia.html" class="botao-registrar">
+                    + Registrar ocorrência
+                </a>
+            </div>
+
+            <section class="minhas-resumo">
+                <div class="minhas-resumo-card">
+                    <span>Total de ocorrências</span>
+                    <strong id="total-ocorrencias">0</strong>
+                </div>
+
+                <div class="minhas-resumo-card">
+                    <span>Em andamento</span>
+                    <strong id="total-andamento">0</strong>
+                </div>
+
+                <div class="minhas-resumo-card">
+                    <span>Resolvidas</span>
+                    <strong id="total-resolvidas">0</strong>
+                </div>
+            </section>
+
+            <section class="minhas-listagem">
+                <div class="minhas-listagem-cabecalho">
+                    <h2>Ocorrências registradas</h2>
+                    <p>Consulte os detalhes e acompanhe o andamento dos seus registros.</p>
+                </div>
+
+                <div class="minhas-filtros" aria-label="Filtrar ocorrências">
+                    <button
+                        type="button"
+                        class="filtro-minhas ativo"
+                        data-status="todas"
+                    >
+                        Todas
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filtro-minhas"
+                        data-status="andamento"
+                    >
+                        Em andamento
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filtro-minhas"
+                        data-status="resolvida"
+                    >
+                        Resolvidas
+                    </button>
+                </div>
+
+                <section
+                    id="lista-minhas-ocorrencias"
+                    class="minhas-lista"
+                    aria-live="polite"
+                ></section>
+
+                <p
+                    id="minhas-mensagem-vazia"
+                    class="mensagem-vazia"
+                    hidden
+                >
+                    Você ainda não registrou ocorrências nesta conta.
+                </p>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/minhas-ocorrencias.js"></script>
+
+    <script>
+        const botaoSair = document.getElementById("botao-sair");
+
+        if (botaoSair) {
+            botaoSair.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                const confirmar = confirm("Deseja sair da sua conta?");
+
+                if (confirmar) {
+                    sessionStorage.removeItem("usuarioLogado");
+                    window.location.href = "login.html";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <main class="cadastro-container">
+
+        <section class="cadastro-banner">
+            <img
+                src="../img/teladelogin.png"
+                alt="Amapá Participa"
+            >
+        </section>
+
+        <section class="cadastro-area">
+
+            <div class="cadastro-conteudo">
+
+                <h2>Crie sua conta</h2>
+
+                <p class="subtitulo">
+                    Preencha os dados abaixo para se cadastrar.
+                </p>
+
+                <form id="form-cadastro">
+
+                    <div class="campo">
+
+                        <label for="nome">
+                            Nome completo
+                        </label>
+
+                        <div class="input-container">
+
+                            <img
+                                src="../img/usuario.png"
+                                alt="Nome"
+                                class="input-icon"
+                            >
+
+                            <input
+                                type="text"
+                                id="nome"
+                                placeholder="Digite seu nome completo"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="cpf">
+                            CPF
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cpf"
+                            placeholder="000.000.000-00"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <div class="input-container">
+
+                            <img
+                                src="../img/envelope.png"
+                                alt="E-mail"
+                                class="input-icon"
+                            >
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="exemplo@email.com"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="telefone">
+                            Telefone
+                        </label>
+
+                        <div class="telefone-container">
+
+                            <select id="codigo-pais">
+                                <option>+55</option>
+                            </select>
+
+                            <input
+                                type="tel"
+                                id="telefone"
+                                placeholder="(96) 99999-9999"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <div class="input-container">
+
+                            <img
+                                src="../img/cadeado.png"
+                                alt="Senha"
+                                class="input-icon"
+                            >
+
+                            <input
+                                type="password"
+                                id="senha"
+                                placeholder="Crie uma senha (mín. 8 caracteres)"
+                            >
+
+                            <img
+                                src="../img/olhofechado.png"
+                                alt="Mostrar senha"
+                                class="password-icon"
+                                id="mostrar-senha"
+                            >
+
+                        </div>
+
+                        <div class="requisitos-senha">
+
+                            <p>A senha deve conter:</p>
+
+                            <ul>
+
+                                <li id="requisito-tamanho">
+                                    8 caracteres ou mais
+                                </li>
+
+                                <li id="requisito-maiuscula">
+                                    1 letra maiúscula
+                                </li>
+
+                                <li id="requisito-minuscula">
+                                    1 letra minúscula
+                                </li>
+
+                                <li id="requisito-numero">
+                                    1 número
+                                </li>
+
+                                <li id="requisito-especial">
+                                    1 caractere especial
+                                </li>
+
+                                <li id="requisito-espaco">
+                                    Não possuir espaços
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="termos">
+
+                        <input
+                            type="checkbox"
+                            id="termos"
+                        >
+
+                        <label for="termos">
+                            Li e aceito os Termos de Serviço e Política de Privacidade
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="botao-cadastrar"
+                    >
+                        Cadastrar
+                    </button>
+
+                </form>
+
+
+                <p class="login-link">
+
+                    Já tem uma conta?
+
+                    <a href="login.html">
+                        Faça login
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/cadastro.js"></script>
+
+</body>
+
+</html>

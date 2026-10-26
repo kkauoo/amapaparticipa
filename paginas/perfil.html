@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Amapá Participa</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="pagina-perfil">
+
+    <header class="perfil-topo">
+        <header class="perfil-topo">
+    <a href="../index.html" class="perfil-logo">
+        <img src="../img/logo-provisoria.png" alt="">
+        <span>Amapá Participa</span>
+    </a>
+
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="ocorrencias.html">Ocorrências</a>
+        <a href="minhas-ocorrencias.html">Minhas ocorrências</a>
+        <a href="orgaos.html">Órgãos</a>
+    </nav>
+
+    <div class="perfil-acoes-topo">
+        <a href="perfil.html" id="avatar-topo" class="perfil-avatar">?</a>
+    </div>
+</header>
+    </header>
+
+    <div class="perfil-layout">
+
+        <aside class="perfil-sidebar">
+            <div class="perfil-sidebar-usuario">
+                <div id="avatar-lateral" class="perfil-avatar-grande">?</div>
+                <h3 id="nome-lateral">Usuário</h3>
+            </div>
+
+            <nav class="perfil-menu">
+                <a href="perfil.html" class="ativo">Meu perfil</a>
+                <a href="minhas-ocorrencias.html">Minhas ocorrências</a>
+                <a href="registrar-ocorrencia.html">Registrar ocorrência</a>
+                <button type="button" id="botao-sair">Sair da conta</button>
+            </nav>
+        </aside>
+
+        <main class="perfil-conteudo">
+
+            <h1>Meu perfil</h1>
+            <p>Consulte e gerencie suas informações pessoais.</p>
+
+            <section class="perfil-cartao">
+
+                <div class="perfil-cartao-cabecalho">
+                    <div id="avatar-principal" class="perfil-avatar-perfil">?</div>
+
+                    <div>
+                        <h2 id="nome-usuario">Usuário</h2>
+                        <p id="email-resumo">E-mail</p>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="botao-editar"
+                        class="perfil-botao-editar"
+                    >
+                        Editar perfil
+                    </button>
+                </div>
+
+                <div class="perfil-informacoes">
+                    <h2>Informações pessoais</h2>
+
+                    <div class="perfil-campo">
+                        <span>Nome completo</span>
+                        <p id="nome-detalhe">Não informado</p>
+                    </div>
+
+                    <div class="perfil-campo">
+                        <span>E-mail</span>
+                        <p id="email-detalhe">Não informado</p>
+                    </div>
+
+                    <div class="perfil-campo">
+                        <span>CPF</span>
+                        <p id="cpf-detalhe">Não informado</p>
+                    </div>
+
+                    <div class="perfil-campo">
+                        <span>Telefone</span>
+                        <p id="telefone-detalhe">Não informado</p>
+                    </div>
+
+                    <div class="perfil-campo">
+                        <span>Senha</span>
+                        <p>••••••••</p>
+                    </div>
+                </div>
+
+                <p id="mensagem-perfil" role="status"></p>
+
+            </section>
+
+        </main>
+    </div>
+
+    <div class="modal-verificacao" id="modal-verificacao" hidden>
+        <div
+            class="modal-verificacao-conteudo"
+            id="modal-verificacao-conteudo"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="titulo-verificacao"
+        >
+            <button
+                type="button"
+                class="modal-verificacao-fechar"
+                id="fechar-verificacao"
+                aria-label="Fechar"
+            >
+                ×
+            </button>
+
+            <h2 id="titulo-verificacao">Confirmar identidade</h2>
+
+            <p>
+                Informe sua senha atual para continuar com a edição do perfil.
+            </p>
+
+            <form id="form-verificacao">
+                <label for="senha-verificacao">Senha atual</label>
+
+                <input
+                    type="password"
+                    id="senha-verificacao"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <p id="erro-verificacao" role="alert"></p>
+
+                <button type="submit" class="perfil-botao-editar">
+                    Confirmar identidade
+                </button>
+            </form>
+
+            <div id="edicao-perfil" hidden>
+                <h2>Editar perfil</h2>
+
+                <p>Atualize seus dados pessoais abaixo.</p>
+
+                <form id="form-edicao-perfil">
+
+                    <label for="editar-nome">Nome completo</label>
+                    <input
+                        type="text"
+                        id="editar-nome"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <label for="editar-email">E-mail</label>
+                    <input
+                        type="email"
+                        id="editar-email"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <label for="editar-cpf">CPF</label>
+                    <input
+                        type="text"
+                        id="editar-cpf"
+                        inputmode="numeric"
+                        maxlength="14"
+                        required
+                    >
+
+                    <label for="editar-telefone">Telefone</label>
+                    <input
+                        type="tel"
+                        id="editar-telefone"
+                        autocomplete="tel"
+                        maxlength="15"
+                        required
+                    >
+
+                    <p id="erro-edicao-perfil" role="alert"></p>
+
+                    <button type="submit" class="perfil-botao-editar">
+                        Salvar alterações
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/perfil.js"></script>
+
+</body>
+</html>

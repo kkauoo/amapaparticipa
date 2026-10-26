@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amapá Participa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body class="pagina-inicial">
+
+    <header class="cabecalho">
+        <a href="index.html" class="cabecalho-logo">
+            <img src="img/logo-provisoria.png" alt="Amapá Participa">
+        </a>
+
+        <nav class="cabecalho-menu">
+            <ul>
+                <li><a href="index.html" class="ativo">Início</a></li>
+                <li><a href="paginas/ocorrencias.html">Ocorrências</a></li>
+                <li><a href="paginas/orgaos.html">Órgãos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+
+        <div class="cabecalho-acoes">
+            <button type="button" class="acao-pesquisa" id="botao-pesquisa" aria-label="Pesquisar">
+                <img src="img/lupa-azul.png" alt="">
+            </button>
+
+            <div class="cabecalho-autenticacao" id="cabecalho-autenticacao">
+                <a href="paginas/login.html" class="acao-entrar">Entrar</a>
+                <a href="paginas/cadastro.html" class="acao-cadastrar">Cadastrar</a>
+            </div>
+
+            <a href="paginas/perfil.html"
+               class="avatar-iniciais"
+               id="avatar-usuario"
+               aria-label="Acessar perfil"
+               title="Meu perfil"
+               hidden>
+                <span id="iniciais-usuario">?</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-texto">
+                <h1 class="hero-titulo">
+                    Sua participação transforma
+                    <span class="titulo-verde">o Amapá.</span>
+                </h1>
+
+                <p class="hero-descricao">
+                    Ajude a identificar problemas da sua comunidade.
+                    Registre ocorrências e acompanhe as informações
+                    para contribuir com a melhoria dos espaços públicos.
+                </p>
+
+                <div class="hero-botoes">
+                    <a href="paginas/registrar-ocorrencia.html" class="botao-registrar">
+                        Registrar ocorrência
+                    </a>
+
+                    <a href="paginas/ocorrencias.html" class="botao-ver-ocorrencias">
+                        Ver ocorrências
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-imagem">
+                <div class="detalhe-amarelo"></div>
+
+                <div class="imagem-macapa">
+                    <img src="img/macapabanner.png" alt="Paisagem urbana do Amapá">
+                </div>
+
+                <div class="detalhe-verde"></div>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div class="sobre-conteudo">
+                <h2>Sobre o Amapá Participa</h2>
+                <p>
+                    O Amapá Participa é uma plataforma que incentiva
+                    os cidadãos a registrar e acompanhar problemas
+                    encontrados em suas comunidades.
+                </p>
+                <p>
+                    A participação da população ajuda a dar visibilidade
+                    às ocorrências e contribui para a construção de
+                    comunidades melhores.
+                </p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
