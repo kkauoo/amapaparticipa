@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Órgãos Cadastrados | Amapá Participa</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="pagina-orgaos">
+
+    <header class="cabecalho">
+        <a href="../index.html" class="cabecalho-logo">
+            <img src="../img/logo-provisoria.png" alt="Amapá Participa">
+        </a>
+
+        <nav class="cabecalho-menu">
+            <ul>
+                <a href="../index.html">Início</a>
+                <a href="ocorrencias.html">Ocorrências</a>
+                <a href="minhas-ocorrencias.html">Minhas ocorrências</a>
+                <a href="perfil.html">Perfil</a>
+                <a href="orgaos.html" class="ativo">Órgãos</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="suporte.html">Equipe de Suporte</a>
+            </ul>
+        </nav>
+
+        <div class="cabecalho-acoes">
+            <a href="perfil.html" class="avatar-usuario" id="avatar-usuario">
+                <span id="iniciais-usuario">U</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="orgaos-container">
+        <section class="orgaos-introducao">
+            <h1>Órgãos cadastrados</h1>
+            <p>
+                Conheça os órgãos responsáveis por diferentes áreas dos serviços
+                públicos e consulte suas informações de contato.
+            </p>
+        </section>
+
+        <section class="orgaos-filtros">
+            <div class="orgaos-pesquisa">
+                <label for="pesquisa-orgao">Pesquisar órgão</label>
+                <input
+                    type="text"
+                    id="pesquisa-orgao"
+                    maxlength="50"
+                    placeholder="Digite o nome do órgão..."
+                >
+            </div>
+
+            <fieldset class="orgaos-categorias">
+                <legend>Filtrar por categoria</legend>
+
+                <label>
+                    <input type="checkbox" name="categoria" value="Infraestrutura">
+                    Infraestrutura
+                </label>
+
+                <label>
+                    <input type="checkbox" name="categoria" value="Meio ambiente">
+                    Meio ambiente
+                </label>
+
+                <label>
+                    <input type="checkbox" name="categoria" value="Transporte">
+                    Transporte
+                </label>
+
+                <label>
+                    <input type="checkbox" name="categoria" value="Serviços públicos">
+                    Serviços públicos
+                </label>
+
+                <label>
+                    <input type="checkbox" name="categoria" value="Saneamento">
+                    Saneamento
+                </label>
+            </fieldset>
+
+            <button type="button" id="limpar-filtros" class="btn-limpar-filtros">
+                Limpar filtros
+            </button>
+        </section>
+
+        <section class="orgaos-resultados">
+            <div class="orgaos-resultados-topo">
+                <h2>Conheça os órgãos</h2>
+                <span id="quantidade-orgaos"></span>
+            </div>
+
+            <div id="lista-orgaos" class="orgaos-lista"></div>
+
+            <p id="mensagem-sem-resultados" class="mensagem-sem-resultados" hidden>
+                Nenhum órgão encontrado com os filtros selecionados.
+            </p>
+        </section>
+    </main>
+
+    <div class="modal-orgao" id="modal-orgao" aria-hidden="true">
+        <div
+            class="modal-orgao-conteudo"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-orgao-nome"
+        >
+            <button
+                type="button"
+                class="modal-orgao-fechar"
+                id="fechar-modal"
+                aria-label="Fechar"
+            >×</button>
+
+            <div id="modal-orgao-detalhes"></div>
+        </div>
+    </div>
+
+    <script src="../js/orgaos.js"></script>
+</body>
+</html>

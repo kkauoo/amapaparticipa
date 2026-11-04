@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte ao Usuário | Amapá Participa</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="pagina-suporte">
+
+    <header class="cabecalho">
+        <div class="cabecalho-logo">
+            <a href="../index.html">
+                <img src="../img/logo-provisoria.png" alt="Amapá Participa">
+            </a>
+        </div>
+
+        <nav class="cabecalho-menu">
+            <ul>
+                <a href="../index.html">Início</a>
+                <a href="ocorrencias.html">Ocorrências</a>
+                <a href="minhas-ocorrencias.html">Minhas ocorrências</a>
+                <a href="perfil.html">Perfil</a>
+                <a href="orgaos.html">Órgãos</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="suporte.html" class="ativo">Equipe de Suporte</a>
+            </ul>
+        </nav>
+
+        <div class="cabecalho-acoes">
+            <button type="button" id="botao-busca-topo" aria-label="Buscar">
+                <img src="../img/lupa-azul.png" alt="">
+            </button>
+
+            <div class="cabecalho-autenticacao" id="cabecalho-autenticacao">
+                <a href="perfil.html" class="avatar-iniciais" id="avatar-usuario" aria-label="Meu perfil">
+                    <span id="iniciais-usuario">?</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="conteudo-suporte">
+
+        <section class="suporte-introducao">
+            <h1>Suporte ao Usuário</h1>
+            <p>
+                Precisa de ajuda ou deseja compartilhar uma sugestão?
+                Estamos aqui para ouvir você.
+            </p>
+        </section>
+
+        <section class="suporte-feedback">
+            <div class="suporte-secao-titulo">
+                <span class="suporte-icone">✎</span>
+                <div>
+                    <h2>Envie seu feedback</h2>
+                    <p>
+                        Sua opinião é importante para melhorar o Amapá Participa.
+                        Compartilhe sugestões, reclamações ou observações.
+                    </p>
+                </div>
+            </div>
+
+            <form id="form-feedback">
+                <label for="texto-feedback">Escrever Feedback</label>
+
+                <textarea
+                    id="texto-feedback"
+                    name="feedback"
+                    placeholder="Escreva aqui sua sugestão, reclamação ou observação..."
+                    minlength="50"
+                    maxlength="500"
+                    required
+                ></textarea>
+
+                <div class="feedback-informacoes">
+                    <span id="contador-caracteres">0 / 500 caracteres</span>
+                    <span id="aviso-caracteres">Digite pelo menos 50 caracteres.</span>
+                </div>
+
+                <div class="feedback-acoes">
+                    <button type="submit" id="botao-enviar-feedback" hidden>
+                        Enviar Feedback
+                    </button>
+                </div>
+
+                <p id="mensagem-feedback" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="suporte-contatos">
+            <div class="suporte-secao-titulo">
+                <span class="suporte-icone">☏</span>
+                <div>
+                    <h2>Entre em contato</h2>
+                    <p>
+                        Se preferir, você também pode falar diretamente com
+                        nossa equipe pelos canais abaixo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="contatos-lista">
+
+                <article class="contato-item">
+                    <div class="contato-icone contato-email">✉</div>
+
+                    <div class="contato-informacoes">
+                        <h3>E-mail</h3>
+                        <p>suporte@amapaparticipa.com.br</p>
+                    </div>
+
+                    <a
+                        href="mailto:suporte@amapaparticipa.com.br"
+                        class="botao-contato"
+                    >
+                        Enviar E-mail
+                    </a>
+                </article>
+
+                <article class="contato-item">
+                    <div class="contato-icone contato-whatsapp">◉</div>
+
+                    <div class="contato-informacoes">
+                        <h3>WhatsApp</h3>
+                        <p>(96) 99123-4567</p>
+                    </div>
+
+                    <a
+                        href="https://wa.me/5596991234567"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="botao-contato"
+                    >
+                        Mandar Mensagem
+                    </a>
+                </article>
+
+            </div>
+
+            <p class="contatos-aviso">
+                Os contatos apresentados são fictícios e utilizados apenas
+                para demonstração do protótipo.
+            </p>
+        </section>
+
+    </main>
+
+    <script src="../js/suporte.js"></script>
+</body>
+</html>
