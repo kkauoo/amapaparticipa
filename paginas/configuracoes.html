@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Configurações - Amapá Participa</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="../js/index.js" defer></script>
+    <script src="../js/configuracoes.js" defer></script>
+    <script src="../js/tema.js" defer></script>
+    <script src="../js/vlibras.js" defer></script>
+</head>
+</head>
+
+<body class="pagina-configuracoes">
+
+    
+<header class="cabecalho">
+
+    <a href="../index.html" class="cabecalho-logo">
+        <img src="../img/logo-provisoria.png" alt="Amapá Participa">
+    </a>
+
+    <nav class="cabecalho-menu" aria-label="Navegação principal">
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="ocorrencias.html">Ocorrências</a></li>
+            <li><a href="minhas-ocorrencias.html">Minhas ocorrências</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="orgaos.html">Órgãos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="suporte.html">Equipe de Suporte</a></li>
+        </ul>
+    </nav>
+
+    <div class="cabecalho-acoes">
+
+        <button type="button"
+                class="acao-pesquisa"
+                id="botao-pesquisa"
+                aria-label="Pesquisar">
+            <img src="../img/lupa-azul.png" alt="">
+        </button>
+
+        <div class="cabecalho-autenticacao"
+             id="cabecalho-autenticacao">
+            <a href="login.html" class="acao-entrar">Entrar</a>
+            <a href="cadastro.html" class="acao-cadastrar">Cadastrar</a>
+        </div>
+
+        <a href="perfil.html"
+           class="avatar-iniciais"
+           id="avatar-usuario"
+           aria-label="Acessar perfil"
+           title="Meu perfil"
+           hidden>
+            <span id="iniciais-usuario">?</span>
+        </a>
+
+    </div>
+
+    <script src="../js/tema.js" defer></script>
+
+</header>
+
+
+    <main class="configuracoes-container">
+
+        <section class="configuracoes-painel"
+                 aria-labelledby="titulo-configuracoes">
+
+            <div class="configuracoes-topo">
+
+                <button type="button"
+                        class="configuracoes-fechar"
+                        id="botao-fechar-configuracoes"
+                        aria-label="Fechar configurações"
+                        title="Fechar configurações">
+                    &times;
+                </button>
+
+                <h2 id="titulo-configuracoes">
+                    Configurações do sistema
+                </h2>
+
+            </div>
+
+            <p class="configuracoes-descricao">
+                Personalize a aparência e a acessibilidade
+                do Amapá Participa de acordo com suas preferências.
+            </p>
+
+            <div class="configuracoes-lista">
+
+                <!-- APARÊNCIA -->
+
+                <section class="configuracoes-secao"
+                         aria-labelledby="titulo-aparencia">
+
+                    <div class="configuracoes-secao-titulo">
+                        <h3 id="titulo-aparencia">Aparência</h3>
+                        <p>
+                            Escolha como deseja visualizar o sistema.
+                        </p>
+                    </div>
+
+                    <div class="configuracoes-opcao">
+
+                        <div class="configuracoes-opcao-info">
+                            <h4>Tema do sistema</h4>
+                            <p>
+                                Alterne entre o modo claro e o modo escuro.
+                            </p>
+                        </div>
+
+                        <div class="configuracoes-temas"
+                             role="group"
+                             aria-label="Selecionar tema do sistema">
+
+                            <button type="button"
+                                    class="configuracoes-tema ativo"
+                                    id="tema-claro"
+                                    aria-pressed="true">
+                                ☀ Claro
+                            </button>
+
+                            <button type="button"
+                                    class="configuracoes-tema"
+                                    id="tema-escuro"
+                                    aria-pressed="false">
+                                ☾ Escuro
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- TAMANHO DA FONTE -->
+
+                <section class="configuracoes-secao"
+                         aria-labelledby="titulo-acessibilidade">
+
+                    <div class="configuracoes-secao-titulo">
+                        <h3 id="titulo-acessibilidade">
+                            Acessibilidade
+                        </h3>
+
+                        <p>
+                            Ajuste a visualização dos textos
+                            para facilitar a leitura.
+                        </p>
+                    </div>
+
+                    <div class="configuracoes-opcao">
+
+                        <div class="configuracoes-opcao-info">
+                            <h4>Tamanho da fonte</h4>
+                            <p>
+                                Escolha o tamanho dos textos do sistema.
+                            </p>
+                        </div>
+
+                        <fieldset class="configuracoes-fontes">
+
+                            <legend class="visualmente-oculto">
+                                Tamanho da fonte
+                            </legend>
+
+                            <label class="configuracoes-fonte">
+                                <input type="radio"
+                                       name="tamanho-fonte"
+                                       value="normal"
+                                       checked>
+                                Normal
+                            </label>
+
+                            <label class="configuracoes-fonte">
+                                <input type="radio"
+                                       name="tamanho-fonte"
+                                       value="medio">
+                                Médio
+                            </label>
+
+                            <label class="configuracoes-fonte">
+                                <input type="radio"
+                                       name="tamanho-fonte"
+                                       value="grande">
+                                Grande
+                            </label>
+
+                        </fieldset>
+
+                    </div>
+
+                </section>
+
+                <!-- CONTA -->
+
+                <section class="configuracoes-secao"
+                         aria-labelledby="titulo-conta">
+
+                    <div class="configuracoes-secao-titulo">
+                        <h3 id="titulo-conta">Conta</h3>
+                        <p>
+                            Gerencie sua sessão no Amapá Participa.
+                        </p>
+                    </div>
+
+                    <div class="configuracoes-opcao">
+
+                        <div class="configuracoes-opcao-info">
+                            <h4>Sair da conta</h4>
+                            <p>
+                                Encerre sua sessão atual e retorne
+                                para a Tela de Login.
+                            </p>
+                        </div>
+
+                        <button type="button"
+                                class="configuracoes-sair"
+                                id="botao-sair-conta">
+                            Sair da conta
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
