@@ -40,6 +40,9 @@
                 aria-label="Meu perfil"
             >--</a>
         </div>
+
+        <script src="../js/tema.js" defer></script>
+        
     </header>
 
     <div class="perfil-layout">
@@ -65,7 +68,7 @@
                     Minhas ocorrências
                 </a>
 
-                <a href="#">
+                <a href="configuracoes.html">
                     <span>⚙️</span>
                     Configurações
                 </a>
@@ -160,22 +163,7 @@
 
     <script src="../js/minhas-ocorrencias.js"></script>
 
-    <script>
-        const botaoSair = document.getElementById("botao-sair");
-
-        if (botaoSair) {
-            botaoSair.addEventListener("click", function (event) {
-                event.preventDefault();
-
-                const confirmar = confirm("Deseja sair da sua conta?");
-
-                if (confirmar) {
-                    sessionStorage.removeItem("usuarioLogado");
-                    window.location.href = "login.html";
-                }
-            });
-        }
-    </script>
+    <script src="../js/vlibras.js" defer></script>
 
 </body>
 </html>
