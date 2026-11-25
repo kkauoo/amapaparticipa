@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar ocorrência - Amapá Participa</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/tema.js" defer></script>
 </head>
 <body class="pagina-registrar">
 
     <header class="topo">
+
         <div class="topo-logo">
             <a href="../index.html" class="topo-logo-link">
                 <img src="../img/logo-provisoria.png" alt="Logo Amapá Participa">
@@ -37,6 +40,7 @@
         </nav>
 
         <div class="topo-acoes">
+
             <button
                 type="button"
                 id="botao-busca-topo"
@@ -51,22 +55,60 @@
                 id="avatar-usuario"
                 aria-label="Meu perfil"
             >?</a>
+
         </div>
+
     </header>
 
     <main class="registro-conteudo">
+
         <div class="registro-cabecalho">
+
             <h1>Registrar ocorrência</h1>
+
             <p>
                 Ajude a melhorar sua comunidade informando os problemas
                 encontrados no seu bairro.
             </p>
+
+        </div>
+
+        <div class="registro-rascunhos-acoes">
+
+            <button
+                type="button"
+                id="botao-recuperar-rascunho"
+            >
+                Meus rascunhos
+                (<span id="quantidade-rascunhos">0</span>)
+            </button>
+
+            <button
+                type="button"
+                id="botao-novo-rascunho"
+            >
+                Novo rascunho
+            </button>
+
+        </div>
+
+        <div
+            id="aviso-edicao-rascunho"
+            class="aviso-edicao-rascunho"
+            role="status"
+            hidden
+        >
+            Você está editando um rascunho salvo.
         </div>
 
         <form id="form-ocorrencia" class="form-ocorrencia">
 
             <div class="campo-formulario">
-                <label for="categoria">Categoria da ocorrência</label>
+
+                <label for="categoria">
+                    Categoria da ocorrência
+                </label>
+
                 <select id="categoria" name="categoria" required>
                     <option value="">Selecione uma categoria</option>
                     <option value="infraestrutura">Infraestrutura</option>
@@ -76,10 +118,15 @@
                     <option value="limpeza-urbana">Limpeza urbana</option>
                     <option value="outros">Outros</option>
                 </select>
+
             </div>
 
             <div class="campo-formulario">
-                <label for="titulo">Título da ocorrência</label>
+
+                <label for="titulo">
+                    Título da ocorrência
+                </label>
+
                 <input
                     type="text"
                     id="titulo"
@@ -89,11 +136,19 @@
                     placeholder="Ex.: Buraco na rua principal"
                     required
                 >
-                <small>Resuma o problema em poucas palavras.</small>
+
+                <small>
+                    Resuma o problema em poucas palavras.
+                </small>
+
             </div>
 
             <div class="campo-formulario">
-                <label for="local">Localização do problema</label>
+
+                <label for="local">
+                    Localização do problema
+                </label>
+
                 <input
                     type="text"
                     id="local"
@@ -101,10 +156,15 @@
                     placeholder="Informe a rua, o bairro ou um ponto de referência"
                     required
                 >
+
             </div>
 
             <div class="campo-formulario campo-foto">
-                <label for="foto">Foto da ocorrência</label>
+
+                <label for="foto">
+                    Foto da ocorrência
+                </label>
+
                 <input
                     type="file"
                     id="foto"
@@ -112,11 +172,32 @@
                     accept="image/*"
                     required
                 >
-                <small>Selecione uma imagem de até 1,5 MB.</small>
+
+                <small>
+                    Selecione uma imagem de até 1,5 MB.
+                </small>
+
+                <div id="previa-foto" class="previa-foto" hidden>
+
+                    <img
+                        id="imagem-previa"
+                        alt="Prévia da fotografia da ocorrência"
+                    >
+
+                    <button type="button" id="remover-foto">
+                        Remover foto
+                    </button>
+
+                </div>
+
             </div>
 
             <div class="campo-formulario">
-                <label for="descricao">Descrição do problema</label>
+
+                <label for="descricao">
+                    Descrição do problema
+                </label>
+
                 <textarea
                     id="descricao"
                     name="descricao"
@@ -129,9 +210,11 @@
                 <small>
                     <span id="contador-descricao">0</span>/1000 caracteres
                 </small>
+
             </div>
 
             <div class="acoes-formulario">
+
                 <button type="button" id="botao-sair-rascunho">
                     Sair e salvar rascunho
                 </button>
@@ -147,11 +230,59 @@
                 <button type="submit" class="botao-enviar-ocorrencia">
                     Registrar ocorrência
                 </button>
+
             </div>
 
         </form>
+
     </main>
 
+    <dialog
+        id="modal-rascunhos"
+        class="modal-rascunhos"
+        aria-labelledby="titulo-modal-rascunhos"
+    >
+
+        <div class="modal-rascunhos-cabecalho">
+
+            <div>
+                <h2 id="titulo-modal-rascunhos">
+                    Meus rascunhos
+                </h2>
+
+                <p>
+                    Gerencie suas ocorrências ainda não finalizadas.
+                </p>
+            </div>
+
+            <button
+                type="button"
+                id="fechar-modal-rascunhos"
+                aria-label="Fechar janela de rascunhos"
+            >
+                &times;
+            </button>
+
+        </div>
+
+        <div
+            id="lista-rascunhos"
+            class="lista-rascunhos"
+            aria-live="polite"
+        ></div>
+
+        <div class="modal-rascunhos-rodape">
+
+            <button type="button" id="fechar-rascunhos-rodape">
+                Fechar
+            </button>
+
+        </div>
+
+    </dialog>
+
+    <script src="../js/vlibras.js" defer></script>
     <script src="../js/registrar-ocorrencia.js"></script>
+
 </body>
 </html>
